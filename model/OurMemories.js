@@ -9,6 +9,10 @@ const memorySchema=new mongoose.Schema({
    contentType=String
  ]
  ,
+ desc:[
+ type=String,
+ require=true
+ ],
  time:[
    type=String,
    require=true,
