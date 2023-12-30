@@ -75,7 +75,7 @@ body {
     padding: 20px;
 }
 
-.Photograph,
+.Photograph,.PhotoName,
 .TimeLine {
     background-color: white;
     border: 1px solid #ddd;
