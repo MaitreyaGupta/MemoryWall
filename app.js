@@ -38,6 +38,7 @@ app.post("/",upload.single("imageOption"),async function(req,res){
     console.log(req.file.filename)
     const memory1=new memories({
         time:req.body.memText,
+        desc:req.body.description,
         image:req.file.filename
     })
     memory1.save().then(console.log("Done Succesfully"))
@@ -48,6 +49,7 @@ app.get("/MemoryWall",async function(req,res){
     const memory1=await memories.find({})
     res.render("MemoryWall",{
         image:req.body.image,
+        desc:req.body.desc,
         time:req.body.time,
         Memories:memory1})
 })
