@@ -1,0 +1,19 @@
+<%- include("Header") -%>
+<body>
+    <div class="MemoryWall">
+        <div class="Photograph">
+        <p>Photos will be shown</p>
+        </div>
+        <div class="TimeLine">
+          <p>Time will be shown</p>
+        </div>
+    </div>
+     <%Memories.forEach(function(Memorie){%>
+      <div class="Photograph">
+        <img src="<%=Memorie.image%>" alt="image">
+      </div>
+       <div class="TimeLine">
+        <%=Memorie.time%>
+       </div>
+     <%})%>
+</body>
